@@ -66,6 +66,7 @@ const actionsStyles = css`
   background-color: transparent;
   border: 1.5px solid hsl(0, 0%, 41%);
   border-radius: 14px;
+  margin-top: .5rem;
 }
 `;
 
