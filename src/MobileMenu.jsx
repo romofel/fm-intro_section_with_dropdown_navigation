@@ -17,6 +17,9 @@ color: hsl(0, 0%, 41%);
 `;
 
 const itemsListStyles = css`
+& li:not(:first-of-type) {
+  margin-top: 1rem;
+}
 `;
 
 const featuresItem = css`
