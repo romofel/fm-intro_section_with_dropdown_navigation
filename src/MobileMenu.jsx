@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
-import { actions } from '@storybook/addon-actions';
 import iconArrowDown from './assets/icon-arrow-down.svg';
 
 const menuStyles = css`
