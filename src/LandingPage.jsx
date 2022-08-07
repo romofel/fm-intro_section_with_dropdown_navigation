@@ -15,6 +15,7 @@ font-family: 'Epilogue', sans-serif;
 font-weight: bold;
 font-size: 2.25rem;
 text-align: center;
+margin-top: 3rem;
 `;
 
 export default function LandingPage() {
