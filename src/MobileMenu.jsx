@@ -28,9 +28,6 @@ const itemsListStyles = css`
 
 const featuresItem = css`
 margin-top: 5rem;
-& ul {
-  display: none;
-}
 & img {
   margin-left: 1rem;
 }
@@ -73,6 +70,21 @@ const actionsStyles = css`
 }
 `;
 
+const dropDownMenuStyles = css`
+display: none;
+`;
+
+function DropDownMenu() {
+  return (
+        <ul css={dropDownMenuStyles}>
+          <li>Todo List</li>
+          <li>Calendar</li>
+          <li>Reminders</li>
+          <li>Planning</li>
+        </ul>
+  );
+}
+
 export default function MobileMenu() {
   return <div css={menuStyles}>
     <ul css={itemsListStyles}>
@@ -81,12 +93,7 @@ export default function MobileMenu() {
           <span>Features</span>
           <img src={iconArrowDown} alt="down arrow icon" />
         </div>
-        <ul>
-          <li>Todo List</li>
-          <li>Calendar</li>
-          <li>Reminders</li>
-          <li>Planning</li>
-        </ul>
+        <DropDownMenu />
       </li>
       <li css={companyItem}>
         <div className="arrow-container">
