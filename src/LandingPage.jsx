@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 
 import Nav from './Nav';
 import mobileHero from './assets/image-hero-mobile.png'
+import Affiliates from './Affiliates';
 
 
 const heroStyles = css`
@@ -58,12 +59,7 @@ export default function LandingPage() {
       <h1 css={headingStyles}>Make remote work</h1>
       <p css={contentStyles}>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
       <button css={ctaStyles}>Learn more</button>
-      <ul className="affiliates">
-        <li>databiz</li>
-        <li>audiophile</li>
-        <li>meet</li>
-        <li>maker</li>
-      </ul>
+      <Affiliates />
     </>
   );
 }
