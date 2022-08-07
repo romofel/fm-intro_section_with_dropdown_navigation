@@ -87,6 +87,11 @@ align-items: start;
 .dropdown-element:not(:first-of-type) {
 margin-top: 1rem;
 }
+
+.dropdown-element span {
+margin-left: 1rem;
+line-height: 1.625;
+}
 `;
 
 function DropDownMenu() {
