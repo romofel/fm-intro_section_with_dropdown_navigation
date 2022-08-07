@@ -27,6 +27,7 @@ font-size: 1rem;
 text-align: center;
 width: 343px;
 line-height: 1.625;
+margin-top: 1rem;
 `;
 
 export default function LandingPage() {
