@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import Hamburger from 'hamburger-react';
 
 const navStyles = css`
 color: black;
@@ -13,7 +14,7 @@ export default function Nav() {
   return (
   <nav css={navStyles}>
     <h2>snap</h2>
-    <div className="hamburger-menu"></div>
+    <Hamburger />
   </nav>
   );
 
