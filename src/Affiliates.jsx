@@ -14,6 +14,8 @@ function Affiliate({ src, alt }) {
 
 export default function Affiliates() {
   return <ul>
-    <Affiliate src={clientDatabiz} alt="databiz client logo" />
+    {
+      [clientDatabiz, clientAudiophile, clientMeet, clientMaker].map(client => <Affiliate src={client} alt="affiliate client logo" />)
+    }
   </ul>
 }
