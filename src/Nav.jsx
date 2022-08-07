@@ -15,10 +15,10 @@ padding: 1rem;
 
 export default function Nav() {
   return (
-  <nav css={navStyles}>
-    <h2>snap</h2>
-    <Hamburger />
-  </nav>
+    <nav css={navStyles}>
+      <h2>snap</h2>
+      <Hamburger />
+    </nav>
   );
 
 }
