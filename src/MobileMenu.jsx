@@ -54,7 +54,15 @@ const actionsStyles = css`
 }
 .register-button {
   display: block;
+  width: 195px;
+  height: 42px;
+  color: hsl(0, 0%, 41%);
   font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent;
+  border: 1.5px solid hsl(0, 0%, 41%);
+  border-radius: 14px;
 }
 `;
 
