@@ -1,9 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { useState } from 'react';
 
 import Nav from './Nav';
 import mobileHero from './assets/image-hero-mobile.png'
 import Affiliates from './Affiliates';
+import MobileMenu from './MobileMenu';
 
 
 const heroStyles = css`
@@ -50,9 +52,15 @@ margin-top: 1.5rem;
 `;
 
 export default function LandingPage() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <Nav />
+      {
+        isOpen &&
+        <MobileMenu />
+      }
+      <Nav onToggle={setIsOpen} />
       <div>
         <img css={heroStyles} src={mobileHero} alt="Hero for mobile" />
       </div>
