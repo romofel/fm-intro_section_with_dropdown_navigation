@@ -137,17 +137,23 @@ function FeaturesDropDrown() {
 }
 
 function CompanyDropDown() {
+  const [isOpen, setIsOpen] = useState(true);
+
   return (
     <li className="menu-items" css={companyItem}>
       <div className="arrow-container">
         <span>Company</span>
-        <img src={iconArrowDown} alt="down arrow icon" />
+        <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
       </div>
-      <ul>
-        <li>History</li>
-        <li>Our Team</li>
-        <li>Blog</li>
-      </ul>
+      {
+        isOpen && (
+          <ul css={companyDropDownStyles}>
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        )
+      }
     </li>
   );
 }
