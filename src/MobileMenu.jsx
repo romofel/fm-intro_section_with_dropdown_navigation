@@ -47,7 +47,10 @@ const actionsStyles = css`
   display: block;
   background: none;
   border: none;
+  color: hsl(0, 0%, 41%);
   font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 }
 .register-button {
   display: block;
