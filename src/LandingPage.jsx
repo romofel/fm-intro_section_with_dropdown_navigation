@@ -19,6 +19,16 @@ text-align: center;
 margin-top: 3rem;
 `;
 
+const contentStyles = css`
+color: hsl(0, 0%, 41%);
+font-family: 'Epilogue', sans-serif;
+font-weight: 500;
+font-size: 1rem;
+text-align: center;
+width: 343px;
+line-height: 1.625;
+`;
+
 export default function LandingPage() {
   return (
     <>
@@ -27,7 +37,7 @@ export default function LandingPage() {
         <img css={heroStyles} src={mobileHero} alt="Hero for mobile" />
       </div>
       <h1 css={headingStyles}>Make remote work</h1>
-      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <p css={contentStyles}>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
       <button>Learn more</button>
       <ul className="affiliates">
         <li>databiz</li>
