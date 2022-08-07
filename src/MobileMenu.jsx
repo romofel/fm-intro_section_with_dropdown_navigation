@@ -14,6 +14,10 @@ box-sizing: border-box;
 font-family: 'Epilogue', sans-serif;
 font-weight: 500;
 color: hsl(0, 0%, 41%);
+.arrow-container {
+display: flex;
+align-items: center;
+}
 `;
 
 const itemsListStyles = css`
@@ -73,7 +77,7 @@ export default function MobileMenu() {
   return <div css={menuStyles}>
     <ul css={itemsListStyles}>
       <li css={featuresItem}>
-        <div>
+        <div className="arrow-container">
           <span>Features</span>
           <img src={iconArrowDown} alt="down arrow icon" />
         </div>
@@ -85,7 +89,7 @@ export default function MobileMenu() {
         </ul>
       </li>
       <li css={companyItem}>
-        <div>
+        <div className="arrow-container">
           <span>Company</span>
           <img src={iconArrowDown} alt="down arrow icon" />
         </div>
