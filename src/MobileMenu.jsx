@@ -76,6 +76,7 @@ const actionsStyles = css`
 const featureDropDownStyles = (open) => css`
 display: ${open ? 'block' : 'none'};
 margin-top: 1.5rem;
+margin-bottom: 2rem;
 
 .dropdown-element {
 display: flex;
