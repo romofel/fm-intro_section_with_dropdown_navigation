@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
+import { useState } from 'react';
 import iconArrowDown from './assets/icon-arrow-down.svg';
 
 const menuStyles = css`
@@ -21,7 +22,7 @@ align-items: center;
 `;
 
 const itemsListStyles = css`
-& li:not(:first-of-type) {
+.menu-items:not(:first-of-type) {
   margin-top: 1rem;
 }
 `;
@@ -70,32 +71,37 @@ const actionsStyles = css`
 }
 `;
 
-const dropDownMenuStyles = css`
-display: none;
+const dropDownMenuStyles = (open) => css`
+display: ${open ? 'block' : 'none'};
+margin-top: 1.5rem;
+& li:not(:first-of-type) {
+}
 `;
 
 function DropDownMenu() {
+  const [isOpen, setIsOpen] = useState(true);
+
   return (
-        <ul css={dropDownMenuStyles}>
-          <li>Todo List</li>
-          <li>Calendar</li>
-          <li>Reminders</li>
-          <li>Planning</li>
-        </ul>
+    <li css={featuresItem} onClick={() => setIsOpen(!isOpen)}>
+      <div className="arrow-container">
+        <span>Features</span>
+        <img src={iconArrowDown} alt="down arrow icon" />
+      </div>
+      <ul css={dropDownMenuStyles(isOpen)}>
+        <li>Todo List</li>
+        <li>Calendar</li>
+        <li>Reminders</li>
+        <li>Planning</li>
+      </ul>
+    </li>
   );
 }
 
 export default function MobileMenu() {
   return <div css={menuStyles}>
     <ul css={itemsListStyles}>
-      <li css={featuresItem}>
-        <div className="arrow-container">
-          <span>Features</span>
-          <img src={iconArrowDown} alt="down arrow icon" />
-        </div>
-        <DropDownMenu />
-      </li>
-      <li css={companyItem}>
+      <DropDownMenu />
+      <li className="menu-items" css={companyItem}>
         <div className="arrow-container">
           <span>Company</span>
           <img src={iconArrowDown} alt="down arrow icon" />
@@ -106,8 +112,8 @@ export default function MobileMenu() {
           <li>Blog</li>
         </ul>
       </li>
-      <li>Careers</li>
-      <li>About</li>
+      <li className="menu-items">Careers</li>
+      <li className="menu-items">About</li>
     </ul>
 
     <div css={actionsStyles} className="actions">
