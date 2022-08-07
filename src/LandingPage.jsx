@@ -30,6 +30,22 @@ line-height: 1.625;
 margin-top: 1rem;
 `;
 
+const ctaStyles = css`
+display: block;
+width: 136px;
+height: 48px;
+color: hsl(0, 0%, 98%);
+font-family: 'Epilogue', sans-serif;
+font-weight: 700;
+font-size: 1rem;
+background-color: black;
+border: none;
+border-radius: 15px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 1.5rem;
+`;
+
 export default function LandingPage() {
   return (
     <>
@@ -39,7 +55,7 @@ export default function LandingPage() {
       </div>
       <h1 css={headingStyles}>Make remote work</h1>
       <p css={contentStyles}>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-      <button>Learn more</button>
+      <button css={ctaStyles}>Learn more</button>
       <ul className="affiliates">
         <li>databiz</li>
         <li>audiophile</li>
