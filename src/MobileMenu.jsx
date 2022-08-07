@@ -95,25 +95,25 @@ function DropDownMenu() {
       </div>
       <ul css={dropDownMenuStyles(isOpen)}>
         <li className="dropdown-element">
-          <img src={iconTodo} />
+          <img src={iconTodo} alt="dropdown icon"/>
           <span>
           Todo List
           </span>
         </li>
         <li className="dropdown-element">
-          <img src={iconCalendar} />
+          <img src={iconCalendar} alt="dropdown icon" />
           <span>
           Calendar
           </span>
         </li>
         <li className="dropdown-element">
-          <img src={iconReminders} />
+          <img src={iconReminders} alt="dropdown icon"/>
           <span>
             Reminders
           </span>
         </li>
         <li className="dropdown-element">
-          <img src={iconPlanning} />
+          <img src={iconPlanning} alt="dropdown icon"/>
           <span>
             Planning
           </span>
