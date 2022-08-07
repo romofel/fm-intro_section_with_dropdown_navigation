@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
+import { actions } from '@storybook/addon-actions';
 import iconArrowDown from './assets/icon-arrow-down.svg';
 
 const menuStyles = css`
@@ -27,11 +28,30 @@ margin-top: 5rem;
 & ul {
   display: none;
 }
+& img {
+  margin-left: 1rem;
+}
 `;
 
 const companyItem = css`
 & ul {
   display: none;
+}
+& img {
+  margin-left: 1rem;
+}
+`;
+
+const actionsStyles = css`
+.login-button {
+  display: block;
+  background: none;
+  border: none;
+  font-family: 'Epilogue', sans-serif;
+}
+.register-button {
+  display: block;
+  font-family: 'Epilogue', sans-serif;
 }
 `;
 
@@ -65,9 +85,9 @@ export default function MobileMenu() {
       <li>About</li>
     </ul>
 
-    <div className="actions">
-      <button>Login</button>
-      <button>Register</button>
+    <div css={actionsStyles} className="actions">
+      <button className="login-button">Login</button>
+      <button className="register-button">Register</button>
     </div>
   </div>;
 }
