@@ -28,6 +28,8 @@ text-align: center;
 width: 343px;
 line-height: 1.625;
 margin-top: 1rem;
+margin-left: auto;
+margin-right: auto;
 `;
 
 const ctaStyles = css`
