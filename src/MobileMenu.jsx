@@ -51,6 +51,9 @@ const actionsStyles = css`
   font-family: 'Epilogue', sans-serif;
   font-size: 14px;
   font-weight: 500;
+  margin-top: 2rem;
+  width: 195px;
+  height: 42px;
 }
 .register-button {
   display: block;
