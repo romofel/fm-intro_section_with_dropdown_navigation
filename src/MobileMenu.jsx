@@ -8,12 +8,21 @@ right: 0;
 background-color: white;
 height: 100vh;
 width: 65%;
+padding-left: 1.5rem;
+box-sizing: border-box;
+`;
+
+const itemsListStyles = css`
+`;
+
+const featuresItem = css`
+margin-top: 5rem;
 `;
 
 export default function MobileMenu() {
   return <div css={menuStyles}>
-    <ul>
-      <li>
+    <ul css={itemsListStyles}>
+      <li css={featuresItem}>
         <span>Features</span>
         <ul>
           <li>Todo List</li>
