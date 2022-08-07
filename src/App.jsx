@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import Nav from './Nav';
 
 function LandingPage() {
   return (
@@ -17,13 +18,6 @@ function LandingPage() {
       </ul>
     </>
   );
-}
-
-function Nav() {
-  return <nav>
-    <h2>snap</h2>
-    <div className="hamburger-menu"></div>
-  </nav>
 }
 
 function App() {
