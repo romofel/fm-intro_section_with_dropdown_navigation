@@ -40,9 +40,6 @@ margin-top: 5rem;
 `;
 
 const companyItem = css`
-& ul {
-  display: none;
-}
 & img {
   margin-left: 1rem;
 }
