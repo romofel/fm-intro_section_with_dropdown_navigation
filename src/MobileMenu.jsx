@@ -136,11 +136,24 @@ function FeaturesDropDrown() {
   );
 }
 
+const companyDropDownStyles = css`
+margin-top: 1rem;
+margin-bottom: 2rem;
+
+.dropdown-element {
+margin-left: 1rem;
+}
+
+.dropdown-element:not(:first-of-type) {
+margin-top: 1rem;
+}
+`;
+
 function CompanyDropDown() {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <li className="menu-items" css={companyItem}>
+    <li className="menu-items" css={companyItem} onClick={() => setIsOpen(!isOpen)}>
       <div className="arrow-container">
         <span>Company</span>
         <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
@@ -148,9 +161,9 @@ function CompanyDropDown() {
       {
         isOpen && (
           <ul css={companyDropDownStyles}>
-            <li>History</li>
-            <li>Our Team</li>
-            <li>Blog</li>
+            <li className="dropdown-element">History</li>
+            <li className="dropdown-element">Our Team</li>
+            <li className="dropdown-element">Blog</li>
           </ul>
         )
       }
