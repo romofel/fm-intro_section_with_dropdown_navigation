@@ -74,7 +74,9 @@ const actionsStyles = css`
 const dropDownMenuStyles = (open) => css`
 display: ${open ? 'block' : 'none'};
 margin-top: 1.5rem;
-& li:not(:first-of-type) {
+
+.dropdown-element:not(:first-of-type) {
+margin-top: 1rem;
 }
 `;
 
@@ -88,10 +90,10 @@ function DropDownMenu() {
         <img src={iconArrowDown} alt="down arrow icon" />
       </div>
       <ul css={dropDownMenuStyles(isOpen)}>
-        <li>Todo List</li>
-        <li>Calendar</li>
-        <li>Reminders</li>
-        <li>Planning</li>
+        <li className="dropdown-element">Todo List</li>
+        <li className="dropdown-element">Calendar</li>
+        <li className="dropdown-element">Reminders</li>
+        <li className="dropdown-element">Planning</li>
       </ul>
     </li>
   );
