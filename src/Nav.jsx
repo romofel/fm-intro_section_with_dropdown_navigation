@@ -13,11 +13,11 @@ font-size: 35px;
 padding: 1rem;
 `;
 
-export default function Nav() {
+export default function Nav({ onToggle }) {
   return (
     <nav css={navStyles}>
       <h2>snap</h2>
-      <Hamburger />
+      <Hamburger onToggle={toggled => onToggle(toggled)}/>
     </nav>
   );
 
