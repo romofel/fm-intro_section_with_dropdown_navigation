@@ -3,6 +3,10 @@
 import { css } from '@emotion/react';
 import { useState } from 'react';
 import iconArrowDown from './assets/icon-arrow-down.svg';
+import iconTodo from './assets/icon-todo.svg';
+import iconCalendar from './assets/icon-calendar.svg';
+import iconReminders from './assets/icon-reminders.svg';
+import iconPlanning from './assets/icon-planning.svg';
 
 const menuStyles = css`
 position: absolute;
@@ -90,10 +94,30 @@ function DropDownMenu() {
         <img src={iconArrowDown} alt="down arrow icon" />
       </div>
       <ul css={dropDownMenuStyles(isOpen)}>
-        <li className="dropdown-element">Todo List</li>
-        <li className="dropdown-element">Calendar</li>
-        <li className="dropdown-element">Reminders</li>
-        <li className="dropdown-element">Planning</li>
+        <li className="dropdown-element">
+          <img src={iconTodo} />
+          <span>
+          Todo List
+          </span>
+        </li>
+        <li className="dropdown-element">
+          <img src={iconCalendar} />
+          <span>
+          Calendar
+          </span>
+        </li>
+        <li className="dropdown-element">
+          <img src={iconReminders} />
+          <span>
+            Reminders
+          </span>
+        </li>
+        <li className="dropdown-element">
+          <img src={iconPlanning} />
+          <span>
+            Planning
+          </span>
+        </li>
       </ul>
     </li>
   );
