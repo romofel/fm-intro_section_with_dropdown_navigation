@@ -7,6 +7,7 @@ import mobileHero from './assets/image-hero-mobile.png'
 
 const heroStyles = css`
 width: 100%;
+margin-top: 1.5rem;
 `;
 
 const headingStyles = css`
