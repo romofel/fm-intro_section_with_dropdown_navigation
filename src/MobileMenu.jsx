@@ -3,6 +3,7 @@
 import { css } from '@emotion/react';
 import { useState } from 'react';
 import iconArrowDown from './assets/icon-arrow-down.svg';
+import iconArrowUp from './assets/icon-arrow-up.svg';
 import iconTodo from './assets/icon-todo.svg';
 import iconCalendar from './assets/icon-calendar.svg';
 import iconReminders from './assets/icon-reminders.svg';
@@ -105,7 +106,7 @@ function FeaturesDropDrown() {
     <li css={featuresItem} onClick={() => setIsOpen(!isOpen)}>
       <div className="arrow-container">
         <span>Features</span>
-        <img src={iconArrowDown} alt="down arrow icon" />
+        <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
       </div>
       <ul css={featureDropDownStyles(isOpen)}>
         <li className="dropdown-element">
