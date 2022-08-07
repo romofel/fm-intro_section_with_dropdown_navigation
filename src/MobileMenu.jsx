@@ -92,6 +92,10 @@ margin-top: 1rem;
 margin-left: 1rem;
 line-height: 1.625;
 }
+.dropdown-element img {
+width: 18px;
+height: 20px;
+}
 `;
 
 function DropDownMenu() {
