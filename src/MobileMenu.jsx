@@ -75,7 +75,7 @@ const actionsStyles = css`
 }
 `;
 
-const dropDownMenuStyles = (open) => css`
+const featureDropDownStyles = (open) => css`
 display: ${open ? 'block' : 'none'};
 margin-top: 1.5rem;
 
@@ -98,8 +98,8 @@ height: 20px;
 }
 `;
 
-function DropDownMenu() {
-  const [isOpen, setIsOpen] = useState(true);
+function FeaturesDropDrown() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <li css={featuresItem} onClick={() => setIsOpen(!isOpen)}>
@@ -107,7 +107,7 @@ function DropDownMenu() {
         <span>Features</span>
         <img src={iconArrowDown} alt="down arrow icon" />
       </div>
-      <ul css={dropDownMenuStyles(isOpen)}>
+      <ul css={featureDropDownStyles(isOpen)}>
         <li className="dropdown-element">
           <img src={iconTodo} alt="dropdown icon"/>
           <span>
@@ -140,7 +140,7 @@ function DropDownMenu() {
 export default function MobileMenu() {
   return <div css={menuStyles}>
     <ul css={itemsListStyles}>
-      <DropDownMenu />
+      <FeaturesDropDrown />
       <li className="menu-items" css={companyItem}>
         <div className="arrow-container">
           <span>Company</span>
