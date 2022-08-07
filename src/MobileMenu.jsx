@@ -79,6 +79,11 @@ const dropDownMenuStyles = (open) => css`
 display: ${open ? 'block' : 'none'};
 margin-top: 1.5rem;
 
+.dropdown-element {
+display: flex;
+align-items: start;
+}
+
 .dropdown-element:not(:first-of-type) {
 margin-top: 1rem;
 }
