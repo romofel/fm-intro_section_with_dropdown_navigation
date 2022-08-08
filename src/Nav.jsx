@@ -13,6 +13,7 @@ const navStyles = css`
   padding: 1rem;
 
   @media (min-width: 1024px) {
+    justify-content: start;
     .mobile-menu {
       display: none;
     }
