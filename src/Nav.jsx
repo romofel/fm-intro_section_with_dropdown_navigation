@@ -132,7 +132,7 @@ function FeaturesMenuItem() {
     >
       <div className="arrow-container">
         <span>Features</span>
-        <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
+        <img css={css`margin-left: .5rem;`} src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
       </div>
       {isOpen && (
         <HoverMenu>
@@ -195,7 +195,7 @@ function CompanyMenuItem() {
     >
       <div className="arrow-container">
         <span>Company</span>
-        <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
+        <img css={css`margin-left: .5rem;`} src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
       </div>
       {isOpen && (
         <HoverMenu align={"right"} height={128}>
