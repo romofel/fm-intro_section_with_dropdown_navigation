@@ -76,6 +76,18 @@ const ctaButtonsStyles = css`
 `;
 
 const hoverMenuStyles = css`
+  position: absolute;
+  left: -5rem;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 153px;
+  height: 160px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px 0 rgba(0 0 0 / 14.91%);
 `;
 
 function HoverMenu({ children }) {
@@ -86,7 +98,12 @@ function FeaturesMenuItem() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <li className="nav-menu-element">
+    <li
+      css={css`
+        position: relative;
+      `}
+      className="nav-menu-element"
+    >
       <div className="arrow-container">
         <span>Features</span>
         <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
