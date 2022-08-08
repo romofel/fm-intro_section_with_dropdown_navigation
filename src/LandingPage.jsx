@@ -94,6 +94,7 @@ const contentContainerStyles = css`
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 `;
 
@@ -114,12 +115,19 @@ export default function LandingPage() {
           />
         </div>
         <div css={contentContainerStyles}>
-          <h1 css={headingStyles}>Make remote work</h1>
-          <p css={contentStyles}>
-            Get your team in sync, no matter your location. Streamline
-            processes, create team rituals, and watch productivity soar.
-          </p>
-          <button css={ctaStyles}>Learn more</button>
+          <div
+            css={css`
+              margin-top: auto;
+              margin-bottom: auto;
+            `}
+          >
+            <h1 css={headingStyles}>Make remote work</h1>
+            <p css={contentStyles}>
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+            <button css={ctaStyles}>Learn more</button>
+          </div>
           <Affiliates />
         </div>
       </div>
