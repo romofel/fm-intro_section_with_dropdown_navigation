@@ -39,7 +39,33 @@ const navMenuStyles = css`
 `;
 
 const ctaButtonsStyles = css`
+  display: flex;
   margin-left: auto;
+
+  .login-button {
+    display: block;
+    background: none;
+    border: none;
+    color: hsl(0, 0%, 41%);
+    font-family: "Epilogue", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    width: 104px;
+    height: 42px;
+  }
+
+  .register-button {
+    display: block;
+    width: 104px;
+    height: 42px;
+    color: hsl(0, 0%, 41%);
+    font-family: "Epilogue", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1.5px solid hsl(0, 0%, 41%);
+    border-radius: 14px;
+  }
 `;
 
 function NavMenu() {
@@ -56,8 +82,8 @@ function NavMenu() {
 function CTAButtons() {
   return (
     <div css={ctaButtonsStyles}>
-      <button>Login</button>
-      <button>Register</button>
+      <button className="login-button">Login</button>
+      <button className="register-button">Register</button>
     </div>
   );
 }
