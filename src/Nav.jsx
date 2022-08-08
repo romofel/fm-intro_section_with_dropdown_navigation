@@ -81,8 +81,10 @@ const hoverMenuStyles = css`
   top: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
   background-color: white;
   width: 153px;
   height: 160px;
