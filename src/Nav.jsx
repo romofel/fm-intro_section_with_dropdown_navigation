@@ -26,7 +26,13 @@ const mobileMenuStyles = css`
   }
 `;
 
-const navMenuStyles = css``;
+const navMenuStyles = css`
+  display: flex;
+  font-size: 14px;
+  line-height: 1.14;
+  color: hsl(0, 0%, 41%);
+  font-weight: 500;
+`;
 
 function NavMenu() {
   return (
