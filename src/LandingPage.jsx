@@ -59,10 +59,15 @@ const containerStyles = css`
   }
 `;
 
-const heroContainerStyles = css``;
+const heroContainerStyles = css`
+  @media (min-width: 1024px) {
+    flex: 1;
+  }
+`;
 const contentContainerStyles = css`
   @media (min-width: 1024px) {
     order: -1;
+    flex: 1;
   }
 `;
 
@@ -74,7 +79,7 @@ export default function LandingPage() {
       {isOpen && <MobileMenu />}
       <Nav onToggle={setIsOpen} />
       <div css={containerStyles}>
-        <div>
+        <div css={heroContainerStyles}>
           <img css={heroStyles} src={mobileHero} alt="Hero for mobile" />
         </div>
         <div css={contentContainerStyles}>
