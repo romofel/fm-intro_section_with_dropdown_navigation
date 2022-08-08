@@ -14,6 +14,9 @@ const navStyles = css`
 
   @media (min-width: 1024px) {
     justify-content: start;
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
     .mobile-menu {
       display: none;
     }
@@ -32,6 +35,7 @@ const navMenuStyles = css`
   line-height: 1.14;
   color: hsl(0, 0%, 41%);
   font-weight: 500;
+  margin-left: 4rem;
 `;
 
 function NavMenu() {
