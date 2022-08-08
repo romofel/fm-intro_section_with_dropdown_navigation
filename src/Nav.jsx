@@ -129,19 +129,19 @@ function FeaturesMenuItem() {
       <HoverMenu>
         <li>
           <img src={iconTodo} alt="nav element icon" />
-          <span>Todo List</span>
+          <span css={css`margin-left: .5rem;`}>Todo List</span>
         </li>
         <li>
           <img src={iconCalendar} alt="nav element icon" />
-          <span>Calendar</span>
+          <span css={css`margin-left: .5rem;`}>Calendar</span>
         </li>
         <li>
           <img src={iconReminders} alt="nav element icon" />
-          <span>Reminders</span>
+          <span css={css`margin-left: .5rem;`}>Reminders</span>
         </li>
         <li>
           <img src={iconPlanning} alt="nav element icon" />
-          <span>Planning</span>
+          <span css={css`margin-left: .5rem;`}>Planning</span>
         </li>
       </HoverMenu>
     </li>
