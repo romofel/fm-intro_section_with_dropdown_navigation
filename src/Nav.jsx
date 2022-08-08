@@ -38,6 +38,10 @@ const navMenuStyles = css`
   margin-left: 4rem;
 `;
 
+const ctaButtonsStyles = css`
+  margin-left: auto;
+`;
+
 function NavMenu() {
   return (
     <ul css={navMenuStyles}>
@@ -49,11 +53,21 @@ function NavMenu() {
   );
 }
 
+function CTAButtons() {
+  return (
+    <div css={ctaButtonsStyles}>
+      <button>Login</button>
+      <button>Register</button>
+    </div>
+  );
+}
+
 export default function Nav({ onToggle }) {
   return (
     <nav css={navStyles}>
       <h2>snap</h2>
       <NavMenu />
+      <CTAButtons />
       <div css={mobileMenuStyles}>
         <Hamburger onToggle={(toggled) => onToggle(toggled)} />
       </div>
