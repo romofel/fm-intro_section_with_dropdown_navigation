@@ -10,6 +10,12 @@ const affiliateStyles = css`
   & img {
     height: 16px;
   }
+
+  @media (min-width: 1440px) {
+    & img {
+      height: 24px;
+    }
+  }
 `;
 
 function Affiliate({ src, alt }) {
@@ -45,4 +51,3 @@ export default function Affiliates() {
     </ul>
   );
 }
-
