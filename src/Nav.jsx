@@ -121,29 +121,56 @@ function FeaturesMenuItem() {
         position: relative;
       `}
       className="nav-menu-element"
+      onClick={() => setIsOpen(!isOpen)}
     >
       <div className="arrow-container">
         <span>Features</span>
         <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
       </div>
-      <HoverMenu>
-        <li>
-          <img src={iconTodo} alt="nav element icon" />
-          <span css={css`margin-left: .5rem;`}>Todo List</span>
-        </li>
-        <li>
-          <img src={iconCalendar} alt="nav element icon" />
-          <span css={css`margin-left: .5rem;`}>Calendar</span>
-        </li>
-        <li>
-          <img src={iconReminders} alt="nav element icon" />
-          <span css={css`margin-left: .5rem;`}>Reminders</span>
-        </li>
-        <li>
-          <img src={iconPlanning} alt="nav element icon" />
-          <span css={css`margin-left: .5rem;`}>Planning</span>
-        </li>
-      </HoverMenu>
+      {isOpen && (
+        <HoverMenu>
+          <li>
+            <img src={iconTodo} alt="nav element icon" />
+            <span
+              css={css`
+                margin-left: 0.5rem;
+              `}
+            >
+              Todo List
+            </span>
+          </li>
+          <li>
+            <img src={iconCalendar} alt="nav element icon" />
+            <span
+              css={css`
+                margin-left: 0.5rem;
+              `}
+            >
+              Calendar
+            </span>
+          </li>
+          <li>
+            <img src={iconReminders} alt="nav element icon" />
+            <span
+              css={css`
+                margin-left: 0.5rem;
+              `}
+            >
+              Reminders
+            </span>
+          </li>
+          <li>
+            <img src={iconPlanning} alt="nav element icon" />
+            <span
+              css={css`
+                margin-left: 0.5rem;
+              `}
+            >
+              Planning
+            </span>
+          </li>
+        </HoverMenu>
+      )}
     </li>
   );
 }
@@ -157,16 +184,19 @@ function CompanyMenuItem() {
         position: relative;
       `}
       className="nav-menu-element"
+      onClick={() => setIsOpen(!isOpen)}
     >
       <div className="arrow-container">
         <span>Company</span>
         <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
       </div>
-      <HoverMenu align={"right"} height={128}>
-        <li>History</li>
-        <li>Our Team</li>
-        <li>Blog</li>
-      </HoverMenu>
+      {isOpen && (
+        <HoverMenu align={"right"} height={128}>
+          <li>History</li>
+          <li>Our Team</li>
+          <li>Blog</li>
+        </HoverMenu>
+      )}
     </li>
   );
 }
