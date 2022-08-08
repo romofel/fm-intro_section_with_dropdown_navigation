@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { useState } from "react";
 import Hamburger from "hamburger-react";
 import iconArrowDown from "./assets/icon-arrow-down.svg";
 import iconArrowUp from "./assets/icon-arrow-up.svg";
@@ -75,11 +76,29 @@ const ctaButtonsStyles = css`
 `;
 
 function FeaturesMenuItem() {
-  return <li className="nav-menu-element">Features</li>;
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <li className="nav-menu-element">
+      <div className="arrow-container">
+        <span>Features</span>
+        <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
+      </div>
+    </li>
+  );
 }
 
 function CompanyMenuItem() {
-  return <li className="nav-menu-element">Company</li>;
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <li className="nav-menu-element">
+      <div className="arrow-container">
+        <span>Company</span>
+        <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
+      </div>
+    </li>
+  );
 }
 
 function NavMenu() {
