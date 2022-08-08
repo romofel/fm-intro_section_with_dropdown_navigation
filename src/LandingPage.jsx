@@ -58,15 +58,17 @@ export default function LandingPage() {
       {isOpen && <MobileMenu />}
       <Nav onToggle={setIsOpen} />
       <div>
+        <div>
         <img css={heroStyles} src={mobileHero} alt="Hero for mobile" />
-      </div>
+        </div>
       <h1 css={headingStyles}>Make remote work</h1>
-      <p css={contentStyles}>
+        <p css={contentStyles}>
         Get your team in sync, no matter your location. Streamline processes,
         create team rituals, and watch productivity soar.
-      </p>
+        </p>
       <button css={ctaStyles}>Learn more</button>
       <Affiliates />
+    </div>
     </>
   );
 }
