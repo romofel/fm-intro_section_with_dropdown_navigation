@@ -92,8 +92,19 @@ const hoverMenuStyles = css`
   box-shadow: 0 10px 40px 0 rgba(0 0 0 / 14.91%);
 `;
 
-function HoverMenu({ children }) {
-  return <ul css={hoverMenuStyles}>{children}</ul>;
+function HoverMenu({ children, align }) {
+  return (
+    <ul
+      css={[
+        hoverMenuStyles,
+        css`
+          ${align === "right" ? "left: 0" : ""}
+        `,
+      ]}
+    >
+      {children}
+    </ul>
+  );
 }
 
 function FeaturesMenuItem() {
@@ -124,11 +135,21 @@ function CompanyMenuItem() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <li className="nav-menu-element">
+    <li
+      css={css`
+        position: relative;
+      `}
+      className="nav-menu-element"
+    >
       <div className="arrow-container">
         <span>Company</span>
         <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
       </div>
+      <HoverMenu align={"right"}>
+        <li>History</li>
+        <li>Our Team</li>
+        <li>Blog</li>
+      </HoverMenu>
     </li>
   );
 }
