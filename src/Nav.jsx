@@ -36,6 +36,10 @@ const navMenuStyles = css`
   color: hsl(0, 0%, 41%);
   font-weight: 500;
   margin-left: 4rem;
+
+  .nav-menu-element:not(:first-of-type) {
+    margin-left: 2.5rem;
+  }
 `;
 
 const ctaButtonsStyles = css`
@@ -71,10 +75,10 @@ const ctaButtonsStyles = css`
 function NavMenu() {
   return (
     <ul css={navMenuStyles}>
-      <li>Features</li>
-      <li>Company</li>
-      <li>Careers</li>
-      <li>About</li>
+      <li className="nav-menu-element">Features</li>
+      <li className="nav-menu-element">Company</li>
+      <li className="nav-menu-element">Careers</li>
+      <li className="nav-menu-element">About</li>
     </ul>
   );
 }
