@@ -25,12 +25,25 @@ const mobileMenuStyles = css`
   }
 `;
 
+const navMenuStyles = css``;
+
+function NavMenu() {
+  return (
+    <ul css={navMenuStyles}>
+      <li>Features</li>
+      <li>Company</li>
+      <li>Careers</li>
+      <li>About</li>
+    </ul>
+  );
+}
+
 export default function Nav({ onToggle }) {
   return (
     <nav css={navStyles}>
       <h2>snap</h2>
-      <div className="nav-menu"></div>
-    <div css={mobileMenuStyles}>
+      <NavMenu />
+      <div css={mobileMenuStyles}>
         <Hamburger onToggle={(toggled) => onToggle(toggled)} />
       </div>
     </nav>
