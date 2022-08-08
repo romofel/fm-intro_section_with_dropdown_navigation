@@ -4,6 +4,10 @@ import { useState } from "react";
 import Hamburger from "hamburger-react";
 import iconArrowDown from "./assets/icon-arrow-down.svg";
 import iconArrowUp from "./assets/icon-arrow-up.svg";
+import iconTodo from "./assets/icon-todo.svg";
+import iconCalendar from "./assets/icon-calendar.svg";
+import iconReminders from "./assets/icon-reminders.svg";
+import iconPlanning from "./assets/icon-planning.svg";
 
 const navStyles = css`
   color: black;
@@ -92,7 +96,7 @@ const hoverMenuStyles = css`
   box-shadow: 0 10px 40px 0 rgba(0 0 0 / 14.91%);
 `;
 
-function HoverMenu({ children, align, height=160 }) {
+function HoverMenu({ children, align, height = 160 }) {
   return (
     <ul
       css={[
@@ -123,10 +127,22 @@ function FeaturesMenuItem() {
         <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
       </div>
       <HoverMenu>
-        <li>Todo List</li>
-        <li>Calendar</li>
-        <li>Reminders</li>
-        <li>Planning</li>
+        <li>
+          <img src={iconTodo} alt="nav element icon" />
+          <span>Todo List</span>
+        </li>
+        <li>
+          <img src={iconCalendar} alt="nav element icon" />
+          <span>Calendar</span>
+        </li>
+        <li>
+          <img src={iconReminders} alt="nav element icon" />
+          <span>Reminders</span>
+        </li>
+        <li>
+          <img src={iconPlanning} alt="nav element icon" />
+          <span>Planning</span>
+        </li>
       </HoverMenu>
     </li>
   );
