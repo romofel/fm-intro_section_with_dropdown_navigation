@@ -75,6 +75,10 @@ const ctaButtonsStyles = css`
   }
 `;
 
+function HoverMenu({ children }) {
+  return <ul>{children}</ul>;
+}
+
 function FeaturesMenuItem() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -84,6 +88,12 @@ function FeaturesMenuItem() {
         <span>Features</span>
         <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
       </div>
+      <HoverMenu>
+        <li>Todo List</li>
+        <li>Calendar</li>
+        <li>Reminders</li>
+        <li>Planning</li>
+      </HoverMenu>
     </li>
   );
 }
