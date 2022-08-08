@@ -75,8 +75,11 @@ const ctaButtonsStyles = css`
   }
 `;
 
+const hoverMenuStyles = css`
+`;
+
 function HoverMenu({ children }) {
-  return <ul>{children}</ul>;
+  return <ul css={hoverMenuStyles}>{children}</ul>;
 }
 
 function FeaturesMenuItem() {
