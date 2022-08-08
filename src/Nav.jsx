@@ -37,45 +37,52 @@ const mobileMenuStyles = css`
 `;
 
 const navMenuStyles = css`
-  display: flex;
-  font-size: 14px;
-  line-height: 1.14;
-  color: hsl(0, 0%, 41%);
-  font-weight: 500;
-  margin-left: 4rem;
+  display: none;
+  @media (min-width: 1024px) {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.14;
+    color: hsl(0, 0%, 41%);
+    font-weight: 500;
+    margin-left: 4rem;
 
-  .nav-menu-element:not(:first-of-type) {
-    margin-left: 2.5rem;
+    .nav-menu-element:not(:first-of-type) {
+      margin-left: 2.5rem;
+    }
   }
 `;
 
 const ctaButtonsStyles = css`
-  display: flex;
-  margin-left: auto;
+  display: none;
 
-  .login-button {
-    display: block;
-    background: none;
-    border: none;
-    color: hsl(0, 0%, 41%);
-    font-family: "Epilogue", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    width: 104px;
-    height: 42px;
-  }
+  @media (min-width: 1024px) {
+    display: flex;
+    margin-left: auto;
 
-  .register-button {
-    display: block;
-    width: 104px;
-    height: 42px;
-    color: hsl(0, 0%, 41%);
-    font-family: "Epilogue", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: transparent;
-    border: 1.5px solid hsl(0, 0%, 41%);
-    border-radius: 14px;
+    .login-button {
+      display: block;
+      background: none;
+      border: none;
+      color: hsl(0, 0%, 41%);
+      font-family: "Epilogue", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      width: 104px;
+      height: 42px;
+    }
+
+    .register-button {
+      display: block;
+      width: 104px;
+      height: 42px;
+      color: hsl(0, 0%, 41%);
+      font-family: "Epilogue", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: transparent;
+      border: 1.5px solid hsl(0, 0%, 41%);
+      border-radius: 14px;
+    }
   }
 `;
 
