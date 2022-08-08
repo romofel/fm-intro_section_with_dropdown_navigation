@@ -26,6 +26,12 @@ const affiliatesStyles = css`
   padding-left: 1rem;
   padding-right: 1rem;
   margin-top: 3rem;
+
+  @media (min-width: 1024px) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export default function Affiliates() {
