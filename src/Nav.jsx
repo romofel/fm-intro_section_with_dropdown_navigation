@@ -92,13 +92,14 @@ const hoverMenuStyles = css`
   box-shadow: 0 10px 40px 0 rgba(0 0 0 / 14.91%);
 `;
 
-function HoverMenu({ children, align }) {
+function HoverMenu({ children, align, height=160 }) {
   return (
     <ul
       css={[
         hoverMenuStyles,
         css`
-          ${align === "right" ? "left: 0" : ""}
+          ${align === "right" ? "left: 0;" : ""}
+          height: ${height}px;
         `,
       ]}
     >
@@ -145,7 +146,7 @@ function CompanyMenuItem() {
         <span>Company</span>
         <img src={isOpen ? iconArrowUp : iconArrowDown} alt="down arrow icon" />
       </div>
-      <HoverMenu align={"right"}>
+      <HoverMenu align={"right"} height={128}>
         <li>History</li>
         <li>Our Team</li>
         <li>Blog</li>
