@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import Hamburger from "hamburger-react";
+import iconArrowDown from "./assets/icon-arrow-down.svg";
+import iconArrowUp from "./assets/icon-arrow-up.svg";
 
 const navStyles = css`
   color: black;
@@ -72,11 +74,19 @@ const ctaButtonsStyles = css`
   }
 `;
 
+function FeaturesMenuItem() {
+  return <li className="nav-menu-element">Features</li>;
+}
+
+function CompanyMenuItem() {
+  return <li className="nav-menu-element">Company</li>;
+}
+
 function NavMenu() {
   return (
     <ul css={navMenuStyles}>
-      <li className="nav-menu-element">Features</li>
-      <li className="nav-menu-element">Company</li>
+      <FeaturesMenuItem />
+      <CompanyMenuItem />
       <li className="nav-menu-element">Careers</li>
       <li className="nav-menu-element">About</li>
     </ul>
