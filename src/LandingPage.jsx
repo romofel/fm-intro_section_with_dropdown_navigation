@@ -50,6 +50,22 @@ const ctaStyles = css`
   margin-top: 1.5rem;
 `;
 
+const containerStyles = css`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+`;
+
+const heroContainerStyles = css``;
+const contentContainerStyles = css`
+  @media (min-width: 1024px) {
+    order: -1;
+  }
+`;
+
 export default function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -57,18 +73,20 @@ export default function LandingPage() {
     <>
       {isOpen && <MobileMenu />}
       <Nav onToggle={setIsOpen} />
-      <div>
+      <div css={containerStyles}>
         <div>
-        <img css={heroStyles} src={mobileHero} alt="Hero for mobile" />
+          <img css={heroStyles} src={mobileHero} alt="Hero for mobile" />
         </div>
-      <h1 css={headingStyles}>Make remote work</h1>
-        <p css={contentStyles}>
-        Get your team in sync, no matter your location. Streamline processes,
-        create team rituals, and watch productivity soar.
-        </p>
-      <button css={ctaStyles}>Learn more</button>
-      <Affiliates />
-    </div>
+        <div css={contentContainerStyles}>
+          <h1 css={headingStyles}>Make remote work</h1>
+          <p css={contentStyles}>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button css={ctaStyles}>Learn more</button>
+          <Affiliates />
+        </div>
+      </div>
     </>
   );
 }
