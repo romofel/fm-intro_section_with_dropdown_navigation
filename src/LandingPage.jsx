@@ -36,6 +36,10 @@ const headingStyles = css`
   font-size: 2.25rem;
   text-align: center;
   margin-top: 3rem;
+
+  @media (min-width: 1024px) {
+    font-size: 2.75rem;
+  }
 `;
 
 const contentStyles = css`
