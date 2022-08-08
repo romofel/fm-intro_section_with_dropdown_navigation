@@ -4,12 +4,29 @@ import { useState } from "react";
 
 import Nav from "./Nav";
 import mobileHero from "./assets/image-hero-mobile.png";
+import desktopHero from "./assets/image-hero-desktop.png";
 import Affiliates from "./Affiliates";
 import MobileMenu from "./MobileMenu";
 
 const heroStyles = css`
   width: 100%;
   margin-top: 1.5rem;
+
+  @media (min-width: 420px) {
+    width: 70%;
+  }
+
+  @media (min-width: 610px) {
+    width: 40%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
+
+  @media (min-width: 1300px) {
+    width: 60%;
+  }
 `;
 
 const headingStyles = css`
@@ -60,6 +77,9 @@ const containerStyles = css`
 `;
 
 const heroContainerStyles = css`
+  @media (min-width: 420px) {
+    text-align: center;
+  }
   @media (min-width: 1024px) {
     flex: 1;
   }
@@ -82,7 +102,12 @@ export default function LandingPage() {
       <Nav onToggle={setIsOpen} />
       <div css={containerStyles}>
         <div css={heroContainerStyles}>
-          <img css={heroStyles} src={mobileHero} alt="Hero for mobile" />
+          <img
+            css={heroStyles}
+            src={mobileHero}
+            srcSet={`${mobileHero} 1000w, ${desktopHero} 1024w`}
+            alt="Hero for mobile"
+          />
         </div>
         <div css={contentContainerStyles}>
           <h1 css={headingStyles}>Make remote work</h1>
